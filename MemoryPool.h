@@ -6,41 +6,41 @@ typedef unsigned short USHORT;
 struct MemoryBlock;
 
 
-//ȫ���ڴ��Ϊ�����ࡣʹ�õ�ʱ��ֻ��Ҫһ��ʵ�����ɣ�������Ҫ���ʵ����
+//全局内存池为单例类。使用的时候只需要一个实例即可，并不需要多个实例。
 class MemoryPool
 {
 private:
 	static USHORT poolMapIndex;
-	//���䲻ͬ�ڴ��ʱ���Ӧ��ӳ���
+	//分配不同内存块时其对应的映射表
 	std::map<int, int>poolMap;
-	//�ڴ�ض����С��
+	//内存池对齐大小。
 	const int POOLALIGNMENT = 8;
-	//��ʼ���ڴ��
+	//初始化内存块
 	int initBlockCount;
-	//�ڴ�鲻�������Ŀ�����
+	//内存块不足增长的块数。
 	int growBlockcount;
-	//�����ڴ���±�
+	//首子内存池下标
 	unsigned firstIndex;
-	//ĩ�ڴ���±ꡣ
+	//末内存池下标。
 	unsigned lastIndex;
-	//���16�в�ͬ�ڴ���С��Ҳ����˵���ڴ�������16����
+	//最多16中不同内存块大小，也就是说子内存池最多有16个。
 	MemoryBlock* memoryHashMap[16];
 	MemoryBlock** mpPtr;
-	//���㲻ͬ�ڴ���Ӧ��hashCode
+	//计算不同内存块对应的hashCode
 	int Hash(int);
-	//�����ֽ�
+	//对齐字节
 	int AlignBytes(int);
-	//���ط�����С��
+	//返回分配块大小。
 	int GetUnitSize(int);
 protected:
 	static MemoryPool* memoryPoolInstance;
 	MemoryPool(int initBlockSize = 1024, int growBlockSize = 256);
 public:
-	//�����ڴ�
+	//分配内存
 	void* Alloc(int);
-	//�ͷ��ڴ档
+	//释放内存。
 	void FreeAlloc(void*);
-	//����ȫ���ڴ��ʵ��
+	//返回全局内存池实例
 	static MemoryPool* GetInstance();
 	~MemoryPool();
 };

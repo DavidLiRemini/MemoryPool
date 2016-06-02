@@ -4,14 +4,14 @@
 typedef unsigned short USHORT;
 struct MemoryBlock
 {
-	//Á´±íÇ°ºóÖ¸Õë
+	//é“¾è¡¨å‰åæŒ‡é’ˆ
 	MemoryBlock*prev;
 	MemoryBlock* next;
-	//·ÖÅäMemoryBlock×Ü´óĞ¡¡£
+	//åˆ†é…MemoryBlockæ€»å¤§å°ã€‚
 	int mSize;
-	//Î´·ÖÅä¿é¸öÊı
+	//æœªåˆ†é…å—ä¸ªæ•°
 	int free;
-	//Ê×¸öÎ´·ÖÅä¿éË÷Òı
+	//é¦–ä¸ªæœªåˆ†é…å—ç´¢å¼•
 	int first;
 	//Padding
 	char mPad[2];
