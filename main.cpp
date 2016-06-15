@@ -91,7 +91,6 @@ int main()
 	test();
 	int p = 12;
 	int*q = &p;
-	int c = (int*)0x12345678 - (int*)0x12345670;
 	short v = p;
 	ListPool<int>iList;
 	iList.AddNode(10);
