@@ -16,5 +16,5 @@
 ![](https://raw.githubusercontent.com/DavidLiRemini/MemoryPool/master/image/step13.png)
 ![](https://raw.githubusercontent.com/DavidLiRemini/MemoryPool/master/image/step14.png)
 ![](https://raw.githubusercontent.com/DavidLiRemini/MemoryPool/master/image/step15.png)
-![](https://raw.githubusercontent.com/DavidLiRemini/MemoryPool/master/image/step18.png)
+![](https://raw.githubusercontent.com/DavidLiRemini/MemoryPool/master/image/step16.png)
 ![](https://raw.githubusercontent.com/DavidLiRemini/MemoryPool/master/image/step17.png)
