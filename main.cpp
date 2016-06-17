@@ -1,11 +1,13 @@
 #include <vld.h>
-#include <vector>
 #include "List_Node.h"
 #include "MemoryPool.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <vector>
 
-
+/**
+ * Memory Leak Caution!  Release memory manually.
+ */
 MemoryPool* mp = MemoryPool::GetInstance();
 class TestMemoryPool
 {
