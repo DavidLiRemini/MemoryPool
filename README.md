@@ -1,6 +1,6 @@
 # MemoryPool
 简单有效的内存池实现，有效的减少内存分配引起的效率问题。<br>
-`Following are some illustrations`
+`Some illustrations`
 
 ![](https://raw.githubusercontent.com/DavidLiRemini/MemoryPool/master/image/step1.png)
 ![](https://raw.githubusercontent.com/DavidLiRemini/MemoryPool/master/image/step2.png)
