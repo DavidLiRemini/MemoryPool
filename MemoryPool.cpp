@@ -152,7 +152,7 @@ void MemoryPool::FreeAlloc(void* p)
 		{
 			memoryHashMap[indexer] = tmp->next;
 			tmp->next = nullptr;
-			tmp->prev == nullptr;
+			tmp->prev = nullptr;
 		}
 		else if (tmp->prev != nullptr && tmp->next != nullptr)
 		{
